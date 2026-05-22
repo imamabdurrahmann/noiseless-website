@@ -34,6 +34,9 @@ export default function Header() {
             <Link href="/katalog" className={`text-sm font-semibold transition-colors ${pathname === '/katalog' || pathname.startsWith('/produk') ? 'text-foreground' : 'text-muted hover:text-accent'}`}>
               Katalog
             </Link>
+            <Link href="/lookbook" className={`text-sm font-semibold transition-colors ${pathname === '/lookbook' ? 'text-foreground' : 'text-muted hover:text-accent'}`}>
+              Lookbook
+            </Link>
             <Link href="/tentang" className={`text-sm font-semibold transition-colors ${pathname === '/tentang' ? 'text-foreground' : 'text-muted hover:text-accent'}`}>
               Tentang
             </Link>
@@ -66,6 +69,9 @@ export default function Header() {
             </Link>
             <Link onClick={() => setIsMenuOpen(false)} href="/katalog" className={`block py-2 text-sm font-semibold ${pathname === '/katalog' || pathname.startsWith('/produk') ? 'text-accent' : 'text-foreground hover:text-accent'}`}>
               Katalog
+            </Link>
+            <Link onClick={() => setIsMenuOpen(false)} href="/lookbook" className={`block py-2 text-sm font-semibold ${pathname === '/lookbook' ? 'text-accent' : 'text-foreground hover:text-accent'}`}>
+              Lookbook
             </Link>
             <Link onClick={() => setIsMenuOpen(false)} href="/tentang" className={`block py-2 text-sm font-semibold ${pathname === '/tentang' ? 'text-accent' : 'text-foreground hover:text-accent'}`}>
               Tentang

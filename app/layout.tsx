@@ -3,6 +3,7 @@ import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Marquee from '@/components/Marquee';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -19,6 +20,11 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'Noiseless - Quiet but noticed',
   description: 'Brand apparel custom dengan desain minimalist. statement tanpa noise.',
+  openGraph: {
+    title: 'Noiseless - Quiet but noticed',
+    description: 'Quiet but noticed. Premium streetwear essentials.',
+    images: ['/images/products/LOGO.png'],
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${outfit.variable} ${jakarta.variable}`}>
       <body className="flex flex-col min-h-screen">
+        <Marquee />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
