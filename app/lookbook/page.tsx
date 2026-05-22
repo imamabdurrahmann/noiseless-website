@@ -7,7 +7,7 @@ export const metadata = {
 
 const placeholderImages = [
   'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1523398002811-999aa8e9f5b9?q=80&w=800&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1550614000-4b95d4157120?q=80&w=800&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1617331721458-bd3bd3f9c7f8?q=80&w=800&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop',
   'https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?q=80&w=800&auto=format&fit=crop',
