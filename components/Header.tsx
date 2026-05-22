@@ -13,22 +13,25 @@ export default function Header() {
   return (
     <header className="fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 w-[95%] sm:w-[90%] max-w-4xl z-50">
       <nav className="bg-background/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.05)] border border-foreground/10 rounded-full px-4 sm:px-6 py-2 sm:py-3 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 hover:scale-105 transition-transform shrink-0">
-            <Image 
-              src="/images/products/LOGO.png" 
-              alt="Noiseless Logo" 
-              width={28} 
-              height={28} 
-              className="object-contain sm:w-8 sm:h-8"
-            />
-            <span className="font-display text-lg sm:text-xl font-bold tracking-widest text-foreground">
-              NOISELESS
-            </span>
-          </Link>
+        <div className="flex items-center justify-between w-full">
+          {/* Logo (Left) */}
+          <div className="flex-1 flex justify-start">
+            <Link href="/" className="flex items-center gap-2 hover:scale-105 transition-transform shrink-0">
+              <Image 
+                src="/images/products/LOGO.png" 
+                alt="Noiseless Logo" 
+                width={28} 
+                height={28} 
+                className="object-contain sm:w-8 sm:h-8"
+              />
+              <span className="font-display text-lg sm:text-xl font-bold tracking-widest text-foreground">
+                NOISELESS
+              </span>
+            </Link>
+          </div>
           
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Desktop Menu (Center) */}
+          <div className="hidden md:flex items-center justify-center space-x-6">
             <Link href="/" className={`text-sm font-semibold transition-colors ${pathname === '/' ? 'text-foreground' : 'text-muted hover:text-accent'}`}>
               Home
             </Link>
@@ -43,8 +46,8 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Desktop Right - Theme & Contact */}
-          <div className="hidden md:flex items-center space-x-4 ml-auto pl-6">
+          {/* Desktop Right - Theme & Contact (Right) */}
+          <div className="hidden md:flex flex-1 items-center justify-end space-x-4">
             <ThemeToggle />
             <Link
               href="/contact"
@@ -54,8 +57,8 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button & Theme */}
-          <div className="md:hidden flex items-center space-x-2 ml-auto">
+          {/* Mobile Menu Button & Theme (Right) */}
+          <div className="md:hidden flex flex-1 items-center justify-end space-x-2">
             <ThemeToggle />
             <button 
               className="p-2 text-foreground"

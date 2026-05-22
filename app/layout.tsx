@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${outfit.variable} ${jakarta.variable}`} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <SplashScreen />
           <Header />
           <main className="flex-1">{children}</main>
