@@ -9,7 +9,7 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  category: 'tshirt' | 'hoodie' | 'crewneck' | 'accessories';
+  category: 'tshirt' | 'hoodie' | 'crewneck' | 'accessories' | 'longsleeve' | 'workjacket' | 'polo';
   sizes: string[];
   colors: ProductColor[];
   images: string[];
@@ -18,89 +18,71 @@ export interface Product {
 export const products: Product[] = [
   {
     id: '1',
-    slug: 'noiseless-essential-tee',
-    name: 'Noiseless Essential Tee',
+    slug: 'noiseless-tshirt',
+    name: 'Noiseless T-Shirt',
     price: 150000,
-    description: 'Premium cotton t-shirt dengan desain minimal. Cocok untuk everyday wear.',
+    description: 'T-shirt Noiseless dengan desain minimal. Cocok untuk everyday wear.',
     category: 'tshirt',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       { name: 'Black', hex: '#000000' },
       { name: 'White', hex: '#FFFFFF' },
-      { name: 'Gray', hex: '#6B7280' },
     ],
-    images: ['/images/products/noiseless_tee.png'],
+    images: ['/images/products/MOCKUP TSHIRT_.png'],
   },
   {
     id: '2',
-    slug: 'noiseless-oversized-hoodie',
-    name: 'Noiseless Oversized Hoodie',
+    slug: 'noiseless-hoodie',
+    name: 'Noiseless Hoodie',
     price: 350000,
-    description: 'Hoodie oversized dengan bahan fleece berkualitas. Hangat dan stylish.',
+    description: 'Hoodie dengan bahan fleece berkualitas. Hangat dan stylish.',
     category: 'hoodie',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
       { name: 'Black', hex: '#000000' },
-      { name: 'Charcoal', hex: '#36454F' },
     ],
-    images: ['/images/products/noiseless_hoodie.png'],
+    images: ['/images/products/MOCKUP HOODIE.png'],
   },
   {
     id: '3',
-    slug: 'noiseless-graphic-tee',
-    name: 'Noiseless Graphic Tee',
+    slug: 'noiseless-longsleeve',
+    name: 'Noiseless Longsleeve',
+    price: 200000,
+    description: 'Longsleeve shirt yang nyaman dengan cuttingan modern.',
+    category: 'longsleeve',
+    sizes: ['S', 'M', 'L', 'XL'],
+    colors: [
+      { name: 'Black', hex: '#000000' },
+    ],
+    images: ['/images/products/MOCKUP LONGSLEEVE.png'],
+  },
+  {
+    id: '4',
+    slug: 'noiseless-workjacket',
+    name: 'Noiseless Workjacket',
+    price: 450000,
+    description: 'Workjacket canvas premium yang tangguh namun tetap stylish.',
+    category: 'workjacket',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    colors: [
+      { name: 'Black', hex: '#000000' },
+      { name: 'Navy', hex: '#000080' },
+    ],
+    images: ['/images/products/MOCKUP WORKJACKET.png'],
+  },
+  {
+    id: '5',
+    slug: 'noiseless-polo',
+    name: 'Noiseless Polo',
     price: 180000,
-    description: 'T-shirt dengan graphic print khas Noiseless. Statement piece untuk kolektor.',
-    category: 'tshirt',
+    description: 'Polo shirt elegan yang cocok untuk smart casual.',
+    category: 'polo',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
       { name: 'Black', hex: '#000000' },
       { name: 'White', hex: '#FFFFFF' },
     ],
-    images: ['/images/products/noiseless_graphic_tee.png'],
-  },
-  {
-    id: '4',
-    slug: 'noiseless-crewneck',
-    name: 'Noiseless Crewneck',
-    price: 280000,
-    description: 'Crewneck klasik dengan material premium. Perfect untuk layering.',
-    category: 'crewneck',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
-    colors: [
-      { name: 'Black', hex: '#000000' },
-      { name: 'Navy', hex: '#000080' },
-      { name: 'Olive', hex: '#556B2F' },
-    ],
-    images: ['/images/products/noiseless_crewneck.png'],
-  },
-  {
-    id: '5',
-    slug: 'noiseless-tote-bag',
-    name: 'Noiseless Tote Bag',
-    price: 95000,
-    description: 'Tote bag kanvas dengan logo Noiseless. Praktis untuk sehari-hari.',
-    category: 'accessories',
-    sizes: ['One Size'],
-    colors: [
-      { name: 'Natural', hex: '#F5F5DC' },
-      { name: 'Black', hex: '#000000' },
-    ],
-    images: ['/images/products/noiseless_totebag.png'],
-  },
-  {
-    id: '6',
-    slug: 'noiseless-cap',
-    name: 'Noiseless Cap',
-    price: 85000,
-    description: 'Snapback cap dengan logo Noiseless. Adjustable fit.',
-    category: 'accessories',
-    sizes: ['One Size'],
-    colors: [
-      { name: 'Black', hex: '#000000' },
-      { name: 'White', hex: '#FFFFFF' },
-    ],
-    images: ['/images/products/noiseless_cap.png'],
+    images: ['/images/products/mockup polo.png'],
   },
 ];
 
