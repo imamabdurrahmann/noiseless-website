@@ -33,18 +33,6 @@ export default function TentangPage() {
             <li>Harga jujur — nggak ada markup gila-gilaan</li>
           </ul>
 
-          <h2 id="contact" className="text-xl font-bold mt-8 mb-4">Hubungi Kami</h2>
-          <p className="text-foreground/80 mb-4">
-            Mau tau lebih lanjut atau langsung order? Hubungi kami via WhatsApp:
-          </p>
-          <a
-            href="https://wa.me/6281234567890"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:scale-105 transition-transform rounded-full"
-          >
-            Chat WhatsApp
-          </a>
         </div>
       </div>
     </div>

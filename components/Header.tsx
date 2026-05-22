@@ -35,7 +35,7 @@ export default function Header() {
             <Link href="/tentang" className="text-sm font-semibold text-muted hover:text-accent transition-colors">
               Tentang
             </Link>
-            <Link href="/tentang#contact" className="text-sm font-semibold text-background bg-foreground px-4 py-1.5 rounded-full hover:bg-accent transition-colors">
+            <Link href="/contact" className="text-sm font-semibold text-background bg-foreground px-4 py-1.5 rounded-full hover:bg-accent transition-colors">
               Contact
             </Link>
           </div>
@@ -68,7 +68,7 @@ export default function Header() {
             <Link onClick={() => setIsMenuOpen(false)} href="/tentang" className="block py-2 text-sm font-semibold text-foreground hover:text-accent">
               Tentang
             </Link>
-            <Link onClick={() => setIsMenuOpen(false)} href="/tentang#contact" className="block py-2 text-sm font-semibold text-accent">
+            <Link onClick={() => setIsMenuOpen(false)} href="/contact" className="block py-2 text-sm font-semibold text-accent">
               Contact
             </Link>
           </div>
