@@ -7,7 +7,6 @@ export interface Product {
   id: string;
   slug: string;
   name: string;
-  price: number;
   description: string;
   category: 'tshirt' | 'hoodie' | 'crewneck' | 'accessories' | 'longsleeve' | 'workjacket' | 'polo';
   sizes: string[];
@@ -21,8 +20,7 @@ export const products: Product[] = [
     id: '1',
     slug: 'noiseless-tshirt',
     name: 'Noiseless T-Shirt',
-    price: 150000,
-    description: 'T-shirt Noiseless dengan desain minimal. Cocok untuk everyday wear.',
+    description: 'Daily beater lu yang bakal kepake terus. Cuttingan fit yang jatuhnya pas banget di badan, bahannya adem parah no debat. Cocok buat nongkrong santai sampe nge-date.',
     category: 'tshirt',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -36,10 +34,9 @@ export const products: Product[] = [
     id: '2',
     slug: 'noiseless-hoodie',
     name: 'Noiseless Hoodie',
-    price: 350000,
-    description: 'Hoodie dengan bahan fleece berkualitas. Hangat dan stylish.',
+    description: 'Bukan hoodie pasaran. Pake cotton fleece 375GSM tebel tapi tetep breathable. Ada detail sablon glitter & emblem star chrome yang bikin lu auto stand out. Quiet but noticed.',
     category: 'hoodie',
-    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    sizes: ['M', 'L', 'XL', 'XXL'],
     colors: [
       { name: 'Black', hex: '#000000' },
     ],
@@ -50,8 +47,7 @@ export const products: Product[] = [
     id: '3',
     slug: 'noiseless-longsleeve',
     name: 'Noiseless Longsleeve',
-    price: 200000,
-    description: 'Longsleeve shirt yang nyaman dengan cuttingan modern.',
+    description: 'Versatile piece yang wajib ada di rotasi fit lu. Grafisnya subtle tapi ngasih statement keras. Pake ini doang udah cukup bikin gaya lu keliatan proper.',
     category: 'longsleeve',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -64,8 +60,7 @@ export const products: Product[] = [
     id: '4',
     slug: 'noiseless-workjacket',
     name: 'Noiseless Workjacket',
-    price: 450000,
-    description: 'Workjacket canvas premium yang tangguh namun tetap stylish.',
+    description: 'Outerwear andalan buat riding atau sekedar layer up. Siluet boxy vintage yang lagi hype abis. Rugged, bold, dan pastinya timeless.',
     category: 'workjacket',
     sizes: ['S', 'M', 'L', 'XL', 'XXL'],
     colors: [
@@ -79,8 +74,7 @@ export const products: Product[] = [
     id: '5',
     slug: 'noiseless-polo',
     name: 'Noiseless Polo',
-    price: 180000,
-    description: 'Polo shirt elegan yang cocok untuk smart casual.',
+    description: 'Naikin level gaya lu tanpa keliatan try hard. Perfect buat dapetin old-money aesthetic atau sekedar smart-casual look. Clean and lowkey flex.',
     category: 'polo',
     sizes: ['S', 'M', 'L', 'XL'],
     colors: [
@@ -98,12 +92,4 @@ export function getProductBySlug(slug: string): Product | undefined {
 
 export function getProductsByCategory(category: string): Product[] {
   return products.filter((p) => p.category === category);
-}
-
-export function formatPrice(price: number): string {
-  return new Intl.NumberFormat('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0,
-  }).format(price);
 }

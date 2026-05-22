@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Product, formatPrice } from '@/data/products';
+import { Product } from '@/data/products';
 
 interface ProductCardProps {
   product: Product;
@@ -22,7 +22,6 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="mt-5 space-y-2 px-2">
         <div className="flex justify-between items-start">
           <h3 className="text-base font-display font-semibold text-foreground group-hover:text-accent transition-colors">{product.name}</h3>
-          <p className="text-sm font-bold text-foreground bg-white dark:bg-zinc-800 px-2 py-1 rounded-lg shadow-sm border border-black/5 dark:border-white/5">{formatPrice(product.price)}</p>
         </div>
         <p className="text-sm text-muted capitalize font-medium">{product.category}</p>
         <div className="flex gap-1.5 pt-1">

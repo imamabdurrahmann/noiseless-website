@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getProductBySlug, formatPrice, products } from '@/data/products';
+import { getProductBySlug, products } from '@/data/products';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { ProductColor } from '@/data/products';
 
@@ -64,8 +64,8 @@ export default async function ProductPage({ params }: PageProps) {
             <p className="text-sm text-muted uppercase tracking-wide mb-2">
               {product.category}
             </p>
-            <h1 className="text-3xl font-bold mb-4 text-foreground">{product.name}</h1>
-            <p className="text-2xl font-semibold mb-6 text-foreground">{formatPrice(product.price)}</p>
+            <h1 className="text-3xl font-bold mb-2 text-foreground">{product.name}</h1>
+            <p className="text-sm font-semibold text-accent mb-6">Harga tergantung stock & ketersediaan. Langsung hit up WA kita buat info detailnya.</p>
             <p className="text-foreground/80 mb-8">{product.description}</p>
 
             {/* Color Options */}
