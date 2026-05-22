@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getProductBySlug, products } from '@/data/products';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { ProductCarousel } from '@/components/ProductCarousel';
 import { ProductColor } from '@/data/products';
 
 interface PageProps {
@@ -48,16 +49,8 @@ export default async function ProductPage({ params }: PageProps) {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Product Image */}
-          <div className="aspect-square relative bg-gray-100 rounded-lg overflow-hidden">
-            <Image
-              src={product.images[0]}
-              alt={product.name}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          {/* Product Image Carousel */}
+          <ProductCarousel images={product.images} productName={product.name} />
 
           {/* Product Info */}
           <div>

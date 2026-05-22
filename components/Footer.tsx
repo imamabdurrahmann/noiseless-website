@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background mt-24 rounded-t-[3rem] overflow-hidden">
@@ -39,6 +41,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Noiseless. All rights reserved.
           </p>
           <div className="flex gap-6">
+            <Link href="/faq" className="text-sm text-background/50 hover:text-background cursor-pointer">FAQ</Link>
             <span className="text-sm text-background/50 hover:text-background cursor-pointer">Privacy Policy</span>
             <span className="text-sm text-background/50 hover:text-background cursor-pointer">Terms of Service</span>
           </div>

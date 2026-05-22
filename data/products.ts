@@ -40,7 +40,7 @@ export const products: Product[] = [
     colors: [
       { name: 'Black', hex: '#000000' },
     ],
-    images: ['/images/products/MOCKUP HOODIE.png'],
+    images: ['/images/products/MOCKUP HOODIE.png', '/images/products/depan hoodie.png'],
     techpackImage: '/images/techpacks/techpack-hoodie.png',
   },
   {

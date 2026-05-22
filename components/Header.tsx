@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,25 +41,36 @@ export default function Header() {
             <Link href="/tentang" className={`text-sm font-semibold transition-colors ${pathname === '/tentang' ? 'text-foreground' : 'text-muted hover:text-accent'}`}>
               Tentang
             </Link>
-            <Link href="/contact" className={`text-sm font-semibold px-4 py-1.5 rounded-full transition-colors ${pathname === '/contact' ? 'bg-accent text-white' : 'bg-foreground text-background hover:bg-accent'}`}>
+          </div>
+
+          {/* Desktop Right - Theme & Contact */}
+          <div className="hidden md:flex items-center space-x-4 ml-auto pl-6">
+            <ThemeToggle />
+            <Link
+              href="/contact"
+              className={`text-sm font-semibold px-4 py-1.5 rounded-full transition-colors ${pathname === '/contact' ? 'bg-accent text-white' : 'bg-foreground text-background hover:bg-accent'}`}
+            >
               Contact
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden p-2 text-foreground"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          {/* Mobile Menu Button & Theme */}
+          <div className="md:hidden flex items-center space-x-2 ml-auto">
+            <ThemeToggle />
+            <button 
+              className="p-2 text-foreground"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu Dropdown */}

@@ -21,13 +21,11 @@
   --font-display: var(--font-outfit), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #111111;
-    --foreground: #fdfcf8;
-    --muted: #71717a;
-    --accent: #ff7326;
-  }
+.dark {
+  --background: #111111;
+  --foreground: #fdfcf8;
+  --muted: #71717a;
+  --accent: #ff7326;
 }
 
 body {
