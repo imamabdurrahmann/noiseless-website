@@ -8,19 +8,33 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <Link href={`/produk/${product.slug}`} className="group">
-      <div className="aspect-square relative bg-gray-100 rounded-lg overflow-hidden">
+    <Link href={`/produk/${product.slug}`} className="group block">
+      <div className="aspect-[4/5] relative bg-zinc-100 rounded-3xl overflow-hidden shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-2">
         <Image
           src={product.images[0]}
           alt={product.name}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
+        {/* Subtle overlay on hover */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
       </div>
-      <div className="mt-4 space-y-1">
-        <h3 className="text-sm font-medium">{product.name}</h3>
-        <p className="text-sm text-gray-600">{formatPrice(product.price)}</p>
-        <p className="text-xs text-gray-400 capitalize">{product.category}</p>
+      <div className="mt-5 space-y-2 px-2">
+        <div className="flex justify-between items-start">
+          <h3 className="text-base font-display font-semibold text-foreground group-hover:text-accent transition-colors">{product.name}</h3>
+          <p className="text-sm font-bold text-foreground bg-white px-2 py-1 rounded-lg shadow-sm border border-black/5">{formatPrice(product.price)}</p>
+        </div>
+        <p className="text-sm text-muted capitalize font-medium">{product.category}</p>
+        <div className="flex gap-1.5 pt-1">
+          {product.colors.map((color) => (
+            <div 
+              key={color.name}
+              className="w-4 h-4 rounded-full border border-black/10 shadow-inner"
+              style={{ backgroundColor: color.hex }}
+              title={color.name}
+            />
+          ))}
+        </div>
       </div>
     </Link>
   );

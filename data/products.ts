@@ -29,7 +29,7 @@ export const products: Product[] = [
       { name: 'White', hex: '#FFFFFF' },
       { name: 'Gray', hex: '#6B7280' },
     ],
-    images: ['/images/products/placeholder-1.jpg'],
+    images: ['/images/products/noiseless_tee.png'],
   },
   {
     id: '2',
@@ -43,7 +43,7 @@ export const products: Product[] = [
       { name: 'Black', hex: '#000000' },
       { name: 'Charcoal', hex: '#36454F' },
     ],
-    images: ['/images/products/placeholder-2.jpg'],
+    images: ['/images/products/noiseless_hoodie.png'],
   },
   {
     id: '3',
@@ -57,7 +57,7 @@ export const products: Product[] = [
       { name: 'Black', hex: '#000000' },
       { name: 'White', hex: '#FFFFFF' },
     ],
-    images: ['/images/products/placeholder-3.jpg'],
+    images: ['/images/products/noiseless_graphic_tee.png'],
   },
   {
     id: '4',
@@ -72,7 +72,7 @@ export const products: Product[] = [
       { name: 'Navy', hex: '#000080' },
       { name: 'Olive', hex: '#556B2F' },
     ],
-    images: ['/images/products/placeholder-4.jpg'],
+    images: ['/images/products/noiseless_crewneck.png'],
   },
   {
     id: '5',
@@ -86,7 +86,7 @@ export const products: Product[] = [
       { name: 'Natural', hex: '#F5F5DC' },
       { name: 'Black', hex: '#000000' },
     ],
-    images: ['/images/products/placeholder-5.jpg'],
+    images: ['/images/products/noiseless_totebag.png'],
   },
   {
     id: '6',
@@ -100,7 +100,7 @@ export const products: Product[] = [
       { name: 'Black', hex: '#000000' },
       { name: 'White', hex: '#FFFFFF' },
     ],
-    images: ['/images/products/placeholder-6.jpg'],
+    images: ['/images/products/noiseless_cap.png'],
   },
 ];
 
