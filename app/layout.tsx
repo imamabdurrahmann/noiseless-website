@@ -3,7 +3,6 @@ import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Marquee from '@/components/Marquee';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -35,7 +34,6 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${outfit.variable} ${jakarta.variable}`}>
       <body className="flex flex-col min-h-screen">
-        <Marquee />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
