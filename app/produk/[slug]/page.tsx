@@ -90,6 +90,23 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
           </div>
         </div>
+
+        {/* Technical Details & Sizing */}
+        {product.techpackImage && (
+          <div className="mt-20">
+            <h2 className="text-2xl font-bold mb-8 text-foreground text-center">Sizing & Technical Details</h2>
+            <div className="bg-white dark:bg-zinc-900 rounded-[2rem] p-4 lg:p-8 border border-black/5 dark:border-white/5 shadow-sm">
+              <div className="relative w-full aspect-[3/4] md:aspect-[4/3] lg:aspect-[16/9] rounded-xl overflow-hidden bg-white">
+                <Image
+                  src={product.techpackImage}
+                  alt={`Size chart and techpack for ${product.name}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

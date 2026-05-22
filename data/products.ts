@@ -13,6 +13,7 @@ export interface Product {
   sizes: string[];
   colors: ProductColor[];
   images: string[];
+  techpackImage?: string;
 }
 
 export const products: Product[] = [
@@ -29,6 +30,7 @@ export const products: Product[] = [
       { name: 'White', hex: '#FFFFFF' },
     ],
     images: ['/images/products/MOCKUP TSHIRT_.png'],
+    techpackImage: '/images/techpacks/techpack-tshirt.png',
   },
   {
     id: '2',
@@ -42,6 +44,7 @@ export const products: Product[] = [
       { name: 'Black', hex: '#000000' },
     ],
     images: ['/images/products/MOCKUP HOODIE.png'],
+    techpackImage: '/images/techpacks/techpack-hoodie.png',
   },
   {
     id: '3',
@@ -55,6 +58,7 @@ export const products: Product[] = [
       { name: 'Black', hex: '#000000' },
     ],
     images: ['/images/products/MOCKUP LONGSLEEVE.png'],
+    techpackImage: '/images/techpacks/techpack-longsleeve.png',
   },
   {
     id: '4',
@@ -69,6 +73,7 @@ export const products: Product[] = [
       { name: 'Navy', hex: '#000080' },
     ],
     images: ['/images/products/MOCKUP WORKJACKET.png'],
+    techpackImage: '/images/techpacks/techpack-workjacket.png',
   },
   {
     id: '5',
@@ -83,6 +88,7 @@ export const products: Product[] = [
       { name: 'White', hex: '#FFFFFF' },
     ],
     images: ['/images/products/mockup polo.png'],
+    techpackImage: '/images/techpacks/techpack-polo.png',
   },
 ];
 

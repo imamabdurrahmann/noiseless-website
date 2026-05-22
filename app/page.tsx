@@ -3,7 +3,7 @@ import { products } from '@/data/products';
 import Link from 'next/link';
 
 export default function Home() {
-  const featuredProducts = products.slice(0, 6);
+  const featuredProducts = products.slice(0, 3);
 
   return (
     <div className="pt-28 sm:pt-32 pb-8 space-y-24">
