@@ -6,11 +6,11 @@ export const metadata = {
 };
 
 const placeholderImages = [
-  '/images/products/TSHIRT.png',
-  '/images/products/HOODIE.png',
-  '/images/products/LONGSLEEVE.png',
-  '/images/products/WORKJACKET.png',
-  '/images/products/POLO.png',
+  '/images/products/MOCKUP TSHIRT_.png',
+  '/images/products/MOCKUP HOODIE.png',
+  '/images/products/MOCKUP LONGSLEEVE.png',
+  '/images/products/MOCKUP WORKJACKET.png',
+  '/images/products/mockup polo.png',
   '/images/products/LOGO.png',
 ];
 
