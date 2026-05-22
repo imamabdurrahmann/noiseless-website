@@ -9,7 +9,7 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link href={`/produk/${product.slug}`} className="group block">
-      <div className="aspect-[4/5] relative bg-zinc-100 rounded-3xl overflow-hidden shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-2">
+      <div className="aspect-[4/5] relative bg-zinc-100 dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-2">
         <Image
           src={product.images[0]}
           alt={product.name}
@@ -22,14 +22,14 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="mt-5 space-y-2 px-2">
         <div className="flex justify-between items-start">
           <h3 className="text-base font-display font-semibold text-foreground group-hover:text-accent transition-colors">{product.name}</h3>
-          <p className="text-sm font-bold text-foreground bg-white px-2 py-1 rounded-lg shadow-sm border border-black/5">{formatPrice(product.price)}</p>
+          <p className="text-sm font-bold text-foreground bg-white dark:bg-zinc-800 px-2 py-1 rounded-lg shadow-sm border border-black/5 dark:border-white/5">{formatPrice(product.price)}</p>
         </div>
         <p className="text-sm text-muted capitalize font-medium">{product.category}</p>
         <div className="flex gap-1.5 pt-1">
           {product.colors.map((color) => (
             <div 
               key={color.name}
-              className="w-4 h-4 rounded-full border border-black/10 shadow-inner"
+              className="w-4 h-4 rounded-full border border-black/10 dark:border-white/10 shadow-inner"
               style={{ backgroundColor: color.hex }}
               title={color.name}
             />

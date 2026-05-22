@@ -34,12 +34,12 @@ export default async function ProductPage({ params }: PageProps) {
   }
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
+    <div className="pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Back Link */}
         <Link
           href="/katalog"
-          className="inline-flex items-center text-sm text-gray-600 hover:text-black mb-8"
+          className="inline-flex items-center text-sm text-muted hover:text-foreground mb-8"
         >
           <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -61,21 +61,21 @@ export default async function ProductPage({ params }: PageProps) {
 
           {/* Product Info */}
           <div>
-            <p className="text-sm text-gray-500 uppercase tracking-wide mb-2">
+            <p className="text-sm text-muted uppercase tracking-wide mb-2">
               {product.category}
             </p>
-            <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
-            <p className="text-2xl font-semibold mb-6">{formatPrice(product.price)}</p>
-            <p className="text-gray-600 mb-8">{product.description}</p>
+            <h1 className="text-3xl font-bold mb-4 text-foreground">{product.name}</h1>
+            <p className="text-2xl font-semibold mb-6 text-foreground">{formatPrice(product.price)}</p>
+            <p className="text-foreground/80 mb-8">{product.description}</p>
 
             {/* Color Options */}
             <div className="mb-6">
-              <p className="text-sm font-medium mb-3">Warna Tersedia:</p>
+              <p className="text-sm font-medium mb-3 text-foreground">Warna Tersedia:</p>
               <div className="flex flex-wrap gap-2">
                 {product.colors.map((color: ProductColor) => (
                   <span
                     key={color.name}
-                    className="px-4 py-2 border border-gray-300 rounded-full text-sm"
+                    className="px-4 py-2 border border-foreground/20 rounded-full text-sm text-foreground"
                   >
                     {color.name}
                   </span>
@@ -84,8 +84,8 @@ export default async function ProductPage({ params }: PageProps) {
             </div>
 
             {/* WhatsApp Order Form */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h2 className="text-lg font-bold mb-4">Pesan via WhatsApp</h2>
+            <div className="bg-zinc-100 dark:bg-zinc-900 p-6 rounded-lg border border-black/5 dark:border-white/5">
+              <h2 className="text-lg font-bold mb-4 text-foreground">Pesan via WhatsApp</h2>
               <WhatsAppButton productName={product.name} colors={product.colors} />
             </div>
           </div>

@@ -6,17 +6,17 @@ export default function Home() {
   const featuredProducts = products.slice(0, 6);
 
   return (
-    <div className="pt-24 pb-8 space-y-24">
+    <div className="pt-28 sm:pt-32 pb-8 space-y-24">
       {/* Hero Section (Bento Box style) */}
       <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[80vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[60vh] lg:h-[80vh]">
           {/* Main Statement */}
-          <div className="lg:col-span-8 bg-zinc-100 rounded-[2rem] sm:rounded-[3rem] p-8 md:p-16 flex flex-col justify-center relative overflow-hidden group">
+          <div className="lg:col-span-8 bg-zinc-100 dark:bg-zinc-900/60 rounded-[2rem] sm:rounded-[3rem] p-8 md:p-16 flex flex-col justify-center relative overflow-hidden group">
             <div className="relative z-10 max-w-2xl">
-              <span className="inline-block px-4 py-1.5 bg-white rounded-full text-xs font-bold tracking-widest text-foreground shadow-sm mb-8 border border-black/5 uppercase">
+              <span className="inline-block px-4 py-1.5 bg-white dark:bg-zinc-800 rounded-full text-xs font-bold tracking-widest text-zinc-900 dark:text-zinc-100 shadow-sm mb-8 border border-black/5 dark:border-white/5 uppercase">
                 New Collection 2026
               </span>
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-black tracking-tighter leading-[0.9] mb-6">
+              <h1 className="text-5xl sm:text-6xl md:text-8xl font-display font-black tracking-tighter leading-[0.9] mb-6 text-zinc-900 dark:text-zinc-50">
                 QUIET <br/> BUT <span className="text-accent">NOTICED.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted font-medium mb-10 max-w-md">
@@ -31,7 +31,7 @@ export default function Home() {
             </div>
             
             {/* Abstract decorative elements */}
-            <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-white/40 to-transparent pointer-events-none" />
+            <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-black/5 dark:from-white/5 to-transparent pointer-events-none" />
           </div>
 
           {/* Side Banner */}
@@ -41,14 +41,14 @@ export default function Home() {
                 <h3 className="font-display text-2xl font-bold mb-2">The Essential Hoodie</h3>
                 <p className="text-background/70 text-sm">Our most loved piece, redefined.</p>
               </div>
-              <Link href="/produk/noiseless-oversized-hoodie" className="relative z-10 mt-8 w-12 h-12 bg-background text-foreground rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Link href="/produk/noiseless-hoodie" className="relative z-10 mt-8 w-12 h-12 bg-background text-foreground rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                 →
               </Link>
               <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-accent/20 blur-3xl rounded-full" />
             </div>
             
-            <div className="bg-accent text-white rounded-[2rem] p-8 h-48 flex items-center justify-center text-center">
-              <p className="font-display text-xl font-bold tracking-tight">Free Shipping Nationwide</p>
+            <div className="bg-accent text-white rounded-[2rem] p-8 min-h-[12rem] flex items-center justify-center text-center">
+              <p className="font-display text-xl sm:text-2xl font-bold tracking-tight">Free Shipping Nationwide</p>
             </div>
           </div>
         </div>
