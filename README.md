@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Noiseless Brand Website
 
-## Getting Started
+Brand catalog website for Noiseless - custom apparel brand.
 
-First, run the development server:
+**Live URL:** https://noiseless-website.vercel.app
+
+---
+
+## Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Deploy to Vercel
+npx vercel --prod
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Post-Deployment Checklist
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Update WhatsApp Number
 
-## Learn More
+Replace the placeholder phone number `6281234567890` with your real WhatsApp number (without + sign).
 
-To learn more about Next.js, take a look at the following resources:
+**Files to update:**
+- `lib/whatsapp.ts` - change default parameter
+- `components/Footer.tsx` - WhatsApp link in footer
+- `app/tentang/page.tsx` - WhatsApp link in contact section
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Format:** Use format `628xxxxxxxxx` (country code 62 for Indonesia, no + sign)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 2. Update Instagram Link
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Replace `https://instagram.com/noiseless` with your actual Instagram URL.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Files to update:**
+- `components/Footer.tsx`
+
+---
+
+### 3. Replace Placeholder Images
+
+Replace the placeholder images in `public/images/products/` with actual product photos.
+
+| File | Product | Recommended Size |
+|------|---------|------------------|
+| placeholder-1.jpg | Essential Tee | 1000x1000px |
+| placeholder-2.jpg | Oversized Hoodie | 1000x1000px |
+| placeholder-3.jpg | Graphic Tee | 1000x1000px |
+| placeholder-4.jpg | Crewneck | 1000x1000px |
+| placeholder-5.jpg | Tote Bag | 1000x1000px |
+| placeholder-6.jpg | Cap | 1000x1000px |
+
+**Recommended format:** JPG or WebP (WebP for better compression)
+
+---
+
+### 4. Update Product Data
+
+Edit `data/products.ts` to:
+- Update product names, descriptions, prices
+- Add/remove products
+- Update available colors and sizes
+- Point to real product images
+
+---
+
+### 5. Update Meta Tags (Optional)
+
+Edit meta tags for SEO optimization:
+
+- `app/layout.tsx` - global site metadata
+- `app/katalog/page.tsx` - catalog page metadata
+- `app/tentang/page.tsx` - about page metadata
+- `app/produk/[slug]/page.tsx` - product page metadata (auto-generated)
+
+---
+
+### 6. Add Custom Domain (Optional)
+
+To add a custom domain (e.g., noiseless.id):
+
+1. Go to Vercel Dashboard
+2. Select your project
+3. Go to Settings → Domains
+4. Add your domain and follow DNS configuration instructions
+
+---
+
+## Project Structure
+
+```
+noiseless-website/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── globals.css        # Global styles
+│   ├── katalog/           # Catalog page
+│   ├── produk/[slug]/     # Product detail pages
+│   └── tentang/           # About page
+├── components/             # React components
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── ProductCard.tsx
+│   └── WhatsAppButton.tsx
+├── data/                   # Static data
+│   └── products.ts
+├── lib/                    # Utilities
+│   └── whatsapp.ts
+└── public/                 # Static assets
+    └── images/products/    # Product images
+```
+
+---
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Language:** TypeScript
+- **Deployment:** Vercel
+- **Images:** Local (unoptimized for Vercel deployment)
+
+---
+
+## Contact
+
+For questions about this project, reach out to the developer.
+
+---
+
+Built with ❤️ for Noiseless Brand
